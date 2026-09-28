@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamaris Livraison — Livraison rapide à moto à Abidjan</title>
+<meta name="description" content="Tamaris Livraison : service de livraison à moto pour commerçants et particuliers à Abidjan et environs. Tarifs clairs, réservation directe sur WhatsApp.">
+<meta property="og:title" content="Tamaris Livraison — Livraison rapide à moto à Abidjan">
+<meta property="og:description" content="Commerçants et particuliers : confiez-nous vos livraisons. Abidjan 1 500 FCFA. Réservation sur WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="hero.jpg">
+<meta name="theme-color" content="#0a4c38">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f6b4f'/%3E%3Ctext x='32' y='44' font-size='34' font-weight='700' text-anchor='middle' fill='%23e8a33d' font-family='Arial'%3ETL%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#0f6b4f; --brand-dark:#083d2d; --brand-mid:#0a4c38; --accent:#f0a930; --accent-dark:#d18d16;
+  --ink:#16241f; --muted:#5b6b65; --bg:#f4f7f5; --card:#fff; --line:#e1e9e5;
+  --shadow:0 10px 30px rgba(8,61,45,.10); --shadow-lg:0 24px 60px rgba(8,61,45,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,4.2vw,2.3rem);margin-bottom:10px}
+.lead{color:var(--muted);max-width:620px;font-size:1.05rem}
+.center{text-align:center}.center .lead{margin-inline:auto}
+section{padding:80px 0}
+.eyebrow{display:inline-block;color:var(--brand);background:#dff0e8;font-weight:800;letter-spacing:.08em;font-size:.75rem;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:800;border:0;cursor:pointer;font-size:1rem;transition:transform .15s,box-shadow .15s,background .15s;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px}
+.btn-accent{background:var(--accent);color:#231603;box-shadow:0 8px 22px rgba(240,169,48,.45)}
+.btn-accent:hover{background:#ffb93f}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.btn-brand{background:var(--brand);color:#fff;box-shadow:0 8px 22px rgba(15,107,79,.35)}
+.btn-brand:hover{background:var(--brand-mid)}
+.btn-wa{background:#25d366;color:#04361a;box-shadow:0 8px 22px rgba(37,211,102,.4)}
+.btn-block{width:100%}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(8,61,45,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1.1rem}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:var(--accent);color:#231603;display:grid;place-items:center;font-weight:900;font-size:.95rem}
+.nav ul{display:flex;gap:26px;list-style:none;color:#d3e7de;font-size:.95rem;font-weight:600}
+.nav ul a{transition:color .15s}.nav ul a:hover{color:#fff}
+.nav .btn{padding:10px 20px;font-size:.9rem}
+@media(max-width:860px){.nav ul{display:none}}
+
+/* hero */
+.hero{background:radial-gradient(1200px 500px at 85% -10%,#1a9a72 0,transparent 60%),linear-gradient(135deg,var(--brand-dark),var(--brand) 70%);color:#fff;padding:64px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.5px,transparent 1.5px);background-size:26px 26px;opacity:.6;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero .eyebrow{background:rgba(255,255,255,.12);color:var(--accent)}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:6px 0 18px;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.sub{color:#d6e8e0;font-size:1.15rem;max-width:520px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.quick{margin-top:30px;display:flex;flex-wrap:wrap;gap:22px;color:#cfe4db;font-size:.92rem}
+.quick div{display:flex;align-items:center;gap:8px}
+.quick svg{width:20px;height:20px;color:var(--accent);flex:none}
+.hero-visual{position:relative}
+.hero-visual .photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow-lg);border:4px solid rgba(255,255,255,.18);transform:rotate(1.2deg)}
+.hero-visual img{width:100%;height:auto}
+.float{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:12px;font-weight:800;font-size:.9rem;animation:bob 4s ease-in-out infinite}
+.float small{display:block;font-weight:600;color:var(--muted);font-size:.75rem}
+.float .ic{width:38px;height:38px;border-radius:11px;background:#e2f3ec;color:var(--brand);display:grid;place-items:center;flex:none}
+.float .ic svg{width:20px;height:20px}
+.f1{left:-18px;bottom:26px}
+.f2{right:-10px;top:-16px;animation-delay:-2s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding:44px 0 64px}.f1{left:8px}.f2{right:8px}}
+
+/* trust strip */
+.strip{margin-top:-42px;position:relative;z-index:3;padding:0}
+.strip .box{background:#fff;border-radius:20px;box-shadow:var(--shadow-lg);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.strip .it{padding:22px 20px;display:flex;align-items:center;gap:14px;border-right:1px solid var(--line)}
+.strip .it:last-child{border-right:0}
+.strip .ic{width:46px;height:46px;border-radius:14px;background:#e2f3ec;color:var(--brand);display:grid;place-items:center;flex:none}
+.strip .ic svg{width:24px;height:24px}
+.strip b{display:block;font-size:.98rem}
+.strip span{color:var(--muted);font-size:.85rem}
+@media(max-width:900px){.strip .box{grid-template-columns:1fr 1fr}.strip .it:nth-child(2){border-right:0}.strip .it:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:480px){.strip .it{padding:16px 12px;gap:10px}.strip .ic{width:38px;height:38px}}
+
+/* prices */
+.grid{display:grid;gap:22px;margin-top:40px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+.zone{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:30px 26px;text-align:left;position:relative;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;font-family:inherit;color:inherit;width:100%}
+.zone:hover{transform:translateY(-6px);border-color:var(--brand);box-shadow:var(--shadow)}
+.zone .place{font-weight:800;font-size:1.05rem;color:var(--brand-mid);display:flex;align-items:center;gap:8px}
+.zone .place svg{width:20px;height:20px;color:var(--accent-dark)}
+.zone .price{font-size:2.4rem;font-weight:900;color:var(--ink);margin:14px 0 2px}
+.zone .price small{font-size:1rem;font-weight:700;color:var(--muted)}
+.zone p{color:var(--muted);font-size:.93rem}
+.zone .go{margin-top:18px;color:var(--brand);font-weight:800;font-size:.92rem}
+.zone.pop{border-color:var(--brand);background:linear-gradient(180deg,#f0faf5,#fff)}
+.zone .badge{position:absolute;top:-13px;right:22px;background:var(--accent);color:#231603;font-size:.75rem;font-weight:900;padding:5px 12px;border-radius:999px;box-shadow:0 6px 14px rgba(240,169,48,.4)}
+
+/* for whom */
+.who{background:#fff}
+.panel{border-radius:24px;padding:34px;position:relative;overflow:hidden}
+.panel h3{font-size:1.4rem;margin:14px 0 8px}
+.panel p{color:inherit;opacity:.85}
+.panel ul{list-style:none;margin:16px 0 22px;display:grid;gap:9px}
+.panel li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.97rem}
+.panel li svg{width:20px;height:20px;flex:none;margin-top:2px}
+.p1{background:linear-gradient(135deg,var(--brand-dark),var(--brand));color:#fff}
+.p1 li svg{color:var(--accent)}
+.p2{background:#fff7e6;border:2px solid #f6e2b6}
+.p2 li svg{color:var(--brand)}
+.panel .ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center}
+.p1 .ico{background:rgba(255,255,255,.14);color:var(--accent)}
+.p2 .ico{background:#fde9bd;color:var(--accent-dark)}
+.panel .ico svg{width:28px;height:28px}
+
+/* steps */
+.steps{position:relative}
+.step{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;position:relative;box-shadow:var(--shadow)}
+.step .num{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#231603;display:grid;place-items:center;font-weight:900;font-size:1.25rem;margin-bottom:14px;box-shadow:0 8px 18px rgba(240,169,48,.4)}
+.step h3{font-size:1.15rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.96rem}
+@media(min-width:861px){.step:not(:last-child)::after{content:"";position:absolute;top:52px;right:-22px;width:22px;height:3px;background:repeating-linear-gradient(90deg,var(--brand) 0 6px,transparent 6px 12px)}}
+
+/* booking */
+.book{background:linear-gradient(135deg,#eaf5ef,#f6faf8)}
+.book .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+@media(max-width:900px){.book .wrap{grid-template-columns:1fr}}
+.perks{list-style:none;margin-top:22px;display:grid;gap:14px}
+.perks li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.perks .ic{width:34px;height:34px;border-radius:10px;background:var(--brand);color:#fff;display:grid;place-items:center;flex:none}
+.perks .ic svg{width:18px;height:18px}
+.form{background:var(--card);border-radius:24px;padding:30px;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+.form h3{font-size:1.25rem;margin-bottom:18px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.fields{grid-template-columns:1fr}.form{padding:22px}}
+label{display:block;font-size:.83rem;font-weight:800;margin-bottom:6px;color:var(--brand-mid)}
+input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid #d3ddd8;border-radius:12px;font:inherit;background:#fbfdfc;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--brand);box-shadow:0 0 0 4px rgba(15,107,79,.15);background:#fff}
+.full{grid-column:1/-1}
+.est{margin-top:18px;padding:16px 18px;border-radius:14px;background:linear-gradient(135deg,var(--brand-dark),var(--brand));color:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.est span{opacity:.85;font-size:.92rem}
+.est strong{font-size:1.5rem;color:var(--accent)}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.err{color:#b3261e;font-size:.85rem;margin-top:10px;display:none;font-weight:600}
+
+/* recruit */
+.recruit{background:linear-gradient(135deg,var(--brand-dark),var(--brand-mid) 60%,var(--brand));color:#fff;position:relative;overflow:hidden}
+.recruit::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.5px,transparent 1.5px);background-size:26px 26px}
+.recruit .wrap{position:relative}
+.recruit .top{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:860px){.recruit .top{grid-template-columns:1fr}}
+.recruit .eyebrow{background:rgba(255,255,255,.12);color:var(--accent)}
+.recruit .lead{color:#d3e7de}
+.recruit .rider{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);border:4px solid rgba(255,255,255,.16);max-width:340px;justify-self:center}
+.rc{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:22px}
+.rc .ic{width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.14);color:var(--accent);display:grid;place-items:center}
+.rc .ic svg{width:24px;height:24px}
+.rc h3{margin:12px 0 4px;font-size:1.05rem}
+.rc p{color:#d3e7de;font-size:.93rem}
+.recruit .form{color:var(--ink);margin-top:34px}
+
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px;transition:box-shadow .2s}
+details[open]{box-shadow:var(--shadow);border-color:#b8d8c9}
+summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--brand);font-weight:700;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:10px;color:var(--muted)}
+.faq{max-width:760px;margin:0 auto}
+
+/* final cta */
+.final{background:linear-gradient(135deg,var(--accent),#ffc95c);padding:56px 0}
+.final .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.final h2{color:#231603;margin:0;font-size:clamp(1.4rem,3.6vw,2rem)}
+.final p{color:#4a3208;font-weight:600}
+
+footer{background:var(--brand-dark);color:#bcd6cb;padding:40px 0 100px;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#fff;font-weight:700}
+@media(min-width:861px){footer{padding-bottom:40px}}
+
+/* mobile bar + float */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px;display:none;gap:10px;box-shadow:0 -8px 24px rgba(0,0,0,.1)}
+.mbar .btn{flex:1;padding:13px 10px;font-size:.95rem}
+@media(max-width:860px){.mbar{display:flex}}
+.wa-float{position:fixed;right:18px;bottom:20px;z-index:45;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.wa-float svg{width:30px;height:30px}
+@media(max-width:860px){.wa-float{display:none}}
+
+/* services grid */
+.g4{grid-template-columns:repeat(4,1fr)}
+.g6{grid-template-columns:repeat(3,1fr)}
+@media(max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g4{grid-template-columns:1fr}}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;transition:transform .2s,box-shadow .2s;text-align:left}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#e2f3ec,#cfeadd);color:var(--brand);display:grid;place-items:center}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{margin:16px 0 6px;font-size:1.08rem}
+.svc p{color:var(--muted);font-size:.94rem}
+
+/* zones */
+.zones .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:900px){.zones .wrap{grid-template-columns:1fr}}
+.zones .pic{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.chip{background:#fff;border:1.5px solid #cfe3d9;color:var(--brand-mid);font-weight:700;font-size:.9rem;padding:8px 14px;border-radius:999px;display:inline-flex;align-items:center;gap:6px}
+.chip svg{width:15px;height:15px;color:var(--accent-dark)}
+.chip.far{background:#fff7e6;border-color:#f3deae}
+.zl{margin-top:22px;display:grid;gap:10px}
+.zl .r{display:flex;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:700}
+.zl .r b{color:var(--brand)}
+
+/* tips */
+.tips{background:#fff}
+.tip{display:flex;gap:16px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:22px}
+.tip .n{flex:none;width:40px;height:40px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:900}
+.tip h3{font-size:1.02rem;margin-bottom:4px}
+.tip p{color:var(--muted);font-size:.93rem}
+
+/* shop */
+.shop{background:linear-gradient(135deg,#fff7e6,#fffdf7)}
+.prod{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:block;transition:transform .2s,box-shadow .2s;text-align:left}
+.prod:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.prod img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#f0f3f1}
+.prod div{padding:14px 16px}
+.prod b{display:block;font-size:.95rem;line-height:1.3;min-height:2.5em}
+.prod span{color:var(--brand);font-weight:900;font-size:1.05rem}
+
+/* cta banner list */
+.cta2{background:linear-gradient(135deg,var(--brand-dark),var(--brand));color:#fff;border-radius:26px;padding:40px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;box-shadow:var(--shadow-lg)}
+@media(max-width:800px){.cta2{grid-template-columns:1fr;padding:28px}}
+.cta2 h2{color:#fff}
+.cta2 p{color:#d3e7de}
+.cta2 ul{list-style:none;display:grid;gap:10px}
+.cta2 li{display:flex;gap:10px;align-items:center;font-weight:700}
+.cta2 li svg{width:22px;height:22px;color:var(--accent);flex:none}
+
+/* progress bar */
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--accent),#ffd88a);z-index:100;box-shadow:0 0 12px rgba(240,169,48,.7)}
+
+/* hero upgrades */
+.hero{padding-bottom:110px;border-bottom-left-radius:56px;border-bottom-right-radius:56px}
+@media(max-width:900px){.hero{padding-bottom:104px;border-bottom-left-radius:32px;border-bottom-right-radius:32px}}
+.rot{display:inline-block;transition:opacity .35s,transform .35s}
+.rot.out{opacity:0;transform:translateY(10px)}
+.road{position:absolute;left:0;right:0;bottom:58px;height:48px;z-index:1;pointer-events:none;overflow:hidden}
+.road::before{content:"";position:absolute;left:0;right:0;bottom:6px;border-top:3px dashed rgba(255,255,255,.28)}
+.road .m{position:absolute;bottom:8px;left:-70px;width:44px;height:44px;color:var(--accent);animation:ride 16s linear infinite;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
+.road .m svg{width:44px;height:44px}
+.road .b{position:absolute;bottom:14px;left:-70px;width:16px;height:16px;color:#fff;opacity:.85;animation:ride 16s linear infinite;animation-delay:.35s}
+@keyframes ride{from{transform:translateX(0)}to{transform:translateX(calc(100vw + 140px))}}
+.btn-accent{position:relative;overflow:hidden}
+.btn-accent::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.8s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-60%}100%{left:140%}}
+
+/* marquee */
+.marq{background:var(--brand-dark);color:#dff0e8;overflow:hidden;padding:16px 0;margin-top:34px;border-block:1px solid rgba(255,255,255,.08)}
+.marq .track{display:flex;gap:42px;width:max-content;animation:scrollx 34s linear infinite;font-weight:800;letter-spacing:.02em;font-size:.95rem;white-space:nowrap}
+.marq .track span{display:inline-flex;align-items:center;gap:42px}
+.marq .track span::after{content:"◆";color:var(--accent);font-size:.7rem}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* chat mockup */
+.demo{margin-top:56px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;text-align:left}
+@media(max-width:820px){.demo{grid-template-columns:1fr;justify-items:center}}
+.demo h3{font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:10px}
+.demo p{color:var(--muted)}
+.phone{width:310px;max-width:100%;background:#111;border-radius:38px;padding:12px;box-shadow:var(--shadow-lg)}
+.screen{background:#ece5dd;border-radius:28px;overflow:hidden;min-height:400px;display:flex;flex-direction:column}
+.chead{background:var(--brand-mid);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px;font-weight:800;font-size:.95rem}
+.chead .av{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#231603;display:grid;place-items:center;font-weight:900;font-size:.8rem}
+.chead small{display:block;font-weight:500;opacity:.8;font-size:.72rem}
+.cbody{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1}
+.bub{max-width:88%;padding:9px 12px;border-radius:14px;font-size:.82rem;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,.12);opacity:0;transform:translateY(8px) scale(.97)}
+.bub.me{align-self:flex-end;background:#d9fdd3;border-top-right-radius:4px}
+.bub.you{align-self:flex-start;background:#fff;border-top-left-radius:4px}
+.bub small{display:block;text-align:right;color:#8a938e;font-size:.66rem;margin-top:3px}
+.demo.in .bub{animation:pop .5s ease forwards}
+.demo.in .b1{animation-delay:.4s}.demo.in .b2{animation-delay:1.6s}.demo.in .b3{animation-delay:2.8s}
+@keyframes pop{to{opacity:1;transform:none}}
+.exlabel{display:inline-block;background:#fff7e6;border:1px solid #f3deae;color:#8a5a00;font-size:.75rem;font-weight:800;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+@media(prefers-reduced-motion:reduce){.bub{opacity:1;transform:none;animation:none!important}.marq .track,.road .m,.road .b,.btn-accent::after{animation:none}}
+
+/* radar */
+.radar{background:radial-gradient(circle at 50% 50%,#0f6b4f,#083d2d 75%);border-radius:24px;padding:18px;box-shadow:var(--shadow-lg)}
+.radar svg{width:100%;height:auto}
+.radar .cap{color:#bcd6cb;font-size:.78rem;text-align:center;margin-top:6px}
+.pulse{animation:pulse 2.6s ease-out infinite;transform-origin:200px 200px}
+@keyframes pulse{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.zones .pic2{margin-top:16px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.zones .pic2 img{width:100%;height:170px;object-fit:cover}
+
+/* card glow */
+.svc,.step,.tip,.zone,.prod{position:relative}
+.svc,.zone{isolation:isolate}
+.svc::before,.zone::before{content:"";position:absolute;inset:-1px;border-radius:inherit;background:linear-gradient(135deg,transparent 60%,rgba(240,169,48,.5));opacity:0;transition:opacity .25s;z-index:-1}
+.svc:hover::before,.zone:hover::before{opacity:1}
+
+/* hero: full-width photo background */
+.hero-bg{position:absolute;top:0;bottom:0;right:0;width:min(66%,1150px);background:url(hero-bg.jpg) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 42%);mask-image:linear-gradient(90deg,transparent 0,#000 42%);z-index:0}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,61,45,.25),rgba(8,61,45,0) 30%,rgba(8,61,45,.35))}
+.hero::before{opacity:.25}
+.hero-visual{min-height:420px}
+.hero-visual .photo{display:none}
+.hero .wrap{grid-template-columns:1fr 1fr}
+@media(max-width:900px){
+  .hero-bg{width:100%;opacity:.32;-webkit-mask-image:none;mask-image:none}
+  .hero-visual{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+}
+
+/* hero: delivery man with the carton on the left, text on the right */
+.hero-bg{right:auto;left:0;width:min(68%,1200px);background:url(hero-man3.jpg) left center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,#000 55%,transparent 100%);mask-image:linear-gradient(90deg,#000 55%,transparent 100%)}
+.hero .wrap>div:first-child{order:2}
+.hero .wrap>.hero-visual{order:1}
+.hero .wrap{grid-template-columns:1fr 1fr}
+.hero-visual{min-height:440px}
+.f1{display:none}
+.f2{right:18px;top:24px}
+@media(max-width:900px){
+  .hero-bg{width:100%;opacity:.3;background-position:22% center;-webkit-mask-image:none;mask-image:none}
+  .hero .wrap>div:first-child{order:1}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.float{animation:none}html{scroll-behavior:auto}}
+</style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-moto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l2 5M9 17.5h6l-3-8H8"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L3 21l1.9-5.4A8 8 0 1121 12z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9M3 9h18M3 9v11h18V9M9 20v-6h6v6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8S10.500 3 8 3a2.500 2.500 0 000 5h4zm0 0s1.500-5 4-5a2.500 2.500 0 010 5z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 14H5z"/><path d="M9 7a3 3 0 016 0"/></symbol>
+  <symbol id="i-return" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9 9 0 00-6.400 2.600L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="logo-mark">TL</span> Tamaris Livraison</a>
+    <ul>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#comment">Comment ça marche</a></li>
+      <li><a href="#zones">Zones</a></li>
+      <li><a href="#livreur">Devenir livreur</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-accent" href="#reserver">Réserver</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Camionnette et livreur à moto Tamaris à Abidjan"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Service de livraison · Abidjan &amp; environs</span>
+      <h1>Vos colis livrés <em class="rot" id="rot">à moto</em>, le jour même.</h1>
+      <p class="sub">Commerçants en ligne ou particuliers : confiez-nous vos livraisons. Un tarif clair, une réservation en 1 minute sur WhatsApp.</p>
+      <div class="cta-row">
+        <a class="btn btn-accent" href="#reserver">Réserver une livraison</a>
+        <a class="btn btn-ghost" href="#tarifs">Voir les tarifs</a>
+      </div>
+      <div class="quick">
+        <div><svg><use href="#i-check"/></svg>Dès 1 500 FCFA</div>
+        <div><svg><use href="#i-check"/></svg>Réservation sur WhatsApp</div>
+        <div><svg><use href="#i-check"/></svg>Pas de compte à créer</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo"><img src="hero.jpg" width="1043" height="724" alt="Livreur Tamaris avec un colis, camionnette et livreur à moto à Abidjan" fetchpriority="high"></div>
+      <div class="float f1"><span class="ic"><svg><use href="#i-clock"/></svg></span><span>Livraison le jour même<small>À moto, dans Abidjan</small></span></div>
+      <div class="float f2"><span class="ic"><svg><use href="#i-pin"/></svg></span><span>Dès 1 500 FCFA<small>Toutes communes</small></span></div>
+    </div>
+  </div>
+  <div class="road" aria-hidden="true">
+    <div class="m"><svg><use href="#i-moto"/></svg></div>
+    <div class="b"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="3" y="6" width="18" height="14" rx="2"/></svg></div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="box rv">
+      <div class="it"><span class="ic"><svg><use href="#i-bolt"/></svg></span><div><b>Rapide</b><span>Livraison à moto</span></div></div>
+      <div class="it"><span class="ic"><svg><use href="#i-shield"/></svg></span><div><b>Sécurisée</b><span>Colis pris en charge</span></div></div>
+      <div class="it"><span class="ic"><svg><use href="#i-pin"/></svg></span><div><b>Partout à Abidjan</b><span>Et communes voisines</span></div></div>
+      <div class="it"><span class="ic"><svg><use href="#i-box"/></svg></span><div><b>Tous types de colis</b><span>Petits et grands</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true">
+  <div class="track">
+    <span>Livraison à moto</span><span>Le jour même</span><span>Abidjan · Bingerville · Grand-Bassam · Songon · Anyama</span><span>Dès 1 500 FCFA</span><span>Réservation sur WhatsApp</span><span>Pas de compte à créer</span>
+    <span>Livraison à moto</span><span>Le jour même</span><span>Abidjan · Bingerville · Grand-Bassam · Songon · Anyama</span><span>Dès 1 500 FCFA</span><span>Réservation sur WhatsApp</span><span>Pas de compte à créer</span>
+  </div>
+</div>
+
+<section id="tarifs">
+  <div class="wrap center">
+    <span class="eyebrow">Tarifs</span>
+    <h2>Un prix clair selon votre zone</h2>
+    <p class="lead">Pas de frais cachés : le tarif est fixe selon la zone de livraison. Cliquez sur votre zone pour réserver.</p>
+    <div class="grid g3">
+      <button class="zone pop rv" data-zone="0" type="button">
+        <span class="badge">Le plus demandé</span>
+        <div class="place"><svg><use href="#i-pin"/></svg>Abidjan</div>
+        <div class="price">1 500 <small>FCFA</small></div>
+        <p>Toutes les communes d'Abidjan</p>
+        <div class="go">Réserver cette zone →</div>
+      </button>
+      <button class="zone rv d1" data-zone="1" type="button">
+        <div class="place"><svg><use href="#i-pin"/></svg>Bingerville</div>
+        <div class="price">2 000 <small>FCFA</small></div>
+        <p>Livraison à Bingerville</p>
+        <div class="go">Réserver cette zone →</div>
+      </button>
+      <button class="zone rv d2" data-zone="2" type="button">
+        <div class="place"><svg><use href="#i-pin"/></svg>Périphérie</div>
+        <div class="price">2 500 <small>FCFA</small></div>
+        <p>Grand-Bassam · Songon · Anyama</p>
+        <div class="go">Réserver cette zone →</div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="alt" style="background:#fff">
+  <div class="wrap center">
+    <span class="eyebrow">Ce que nous livrons</span>
+    <h2>Un livreur pour tous vos colis</h2>
+    <p class="lead">Quelques exemples de livraisons que nous prenons en charge. Un doute sur votre colis ? Écrivez-nous sur WhatsApp.</p>
+    <div class="grid g3">
+      <div class="svc rv"><div class="ic"><svg><use href="#i-bag"/></svg></div><h3>Commandes de boutiques en ligne</h3><p>Vêtements, chaussures, cosmétiques, accessoires : vos clients reçoivent leur commande sans que vous vous déplaciez.</p></div>
+      <div class="svc rv d1"><div class="ic"><svg><use href="#i-doc"/></svg></div><h3>Documents &amp; courriers</h3><p>Dossiers, contrats, enveloppes : remis en main propre, rapidement, à l'adresse indiquée.</p></div>
+      <div class="svc rv d2"><div class="ic"><svg><use href="#i-gift"/></svg></div><h3>Cadeaux &amp; surprises</h3><p>Un cadeau à faire parvenir à un proche à Abidjan ? Nous le remettons pour vous.</p></div>
+      <div class="svc rv"><div class="ic"><svg><use href="#i-box"/></svg></div><h3>Colis petits et moyens</h3><p>Cartons et paquets du quotidien, livrés à moto dans les communes desservies.</p></div>
+      <div class="svc rv d1"><div class="ic"><svg><use href="#i-return"/></svg></div><h3>Retours &amp; échanges clients</h3><p>Un client doit vous renvoyer un article ? Nous le récupérons et vous le rapportons.</p></div>
+      <div class="svc rv d2"><div class="ic"><svg><use href="#i-store"/></svg></div><h3>Livraisons régulières</h3><p>Vous expédiez chaque jour ? Organisons ensemble un fonctionnement adapté à votre activité.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="who">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Pour qui ?</span>
+      <h2>Un service pour tous</h2>
+    </div>
+    <div class="grid g2">
+      <div class="panel p1 rv">
+        <div class="ico"><svg><use href="#i-store"/></svg></div>
+        <h3>Commerçants en ligne</h3>
+        <p>Vous vendez sur les réseaux sociaux, Jumia ou votre boutique ? Concentrez-vous sur vos ventes, on livre vos clients.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Livraisons régulières organisées avec vous</li>
+          <li><svg><use href="#i-check"/></svg>Vos clients livrés le jour même</li>
+          <li><svg><use href="#i-check"/></svg>Un seul contact WhatsApp pour tout gérer</li>
+        </ul>
+        <a class="btn btn-accent" href="#reserver">Confier mes livraisons</a>
+      </div>
+      <div class="panel p2 rv d1">
+        <div class="ico"><svg><use href="#i-user"/></svg></div>
+        <h3>Particuliers</h3>
+        <p>Un colis, un document ou un cadeau à faire parvenir rapidement ? Un livreur passe le récupérer.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Récupération à l'adresse de votre choix</li>
+          <li><svg><use href="#i-check"/></svg>Livraison rapide à moto</li>
+          <li><svg><use href="#i-check"/></svg>Tarif connu à l'avance</li>
+        </ul>
+        <a class="btn btn-brand" href="#reserver">Envoyer un colis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="comment">
+  <div class="wrap center">
+    <span class="eyebrow">Simple &amp; rapide</span>
+    <h2>Comment ça marche</h2>
+    <p class="lead">Trois étapes, aucune complication.</p>
+    <div class="grid g3 steps" style="text-align:left">
+      <div class="step rv"><div class="num">1</div><h3>Vous réservez</h3><p>Remplissez le formulaire ou écrivez-nous sur WhatsApp avec les adresses de récupération et de livraison.</p></div>
+      <div class="step rv d1"><div class="num">2</div><h3>On récupère le colis</h3><p>Un livreur passe chercher le colis à l'adresse indiquée.</p></div>
+      <div class="step rv d2"><div class="num">3</div><h3>On livre</h3><p>Le colis est remis à votre client ou destinataire, le jour même.</p></div>
+    </div>
+    <div class="demo rv">
+      <div>
+        <span class="exlabel">Exemple de conversation</span>
+        <h3>Réserver, c'est juste un message.</h3>
+        <p>Vous remplissez le formulaire, WhatsApp s'ouvre avec votre demande déjà écrite. Vous appuyez sur envoyer, et nous vous répondons pour confirmer.</p>
+        <p style="margin-top:22px"><a class="btn btn-brand" href="#reserver">Essayer maintenant</a></p>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <div class="chead"><span class="av">TL</span><div>Tamaris Livraison<small>WhatsApp</small></div></div>
+          <div class="cbody">
+            <div class="bub me b1">Bonjour Tamaris Livraison, je souhaite réserver une livraison.<br>Récupération : Cocody<br>Livraison : Yopougon<br>Zone : Abidjan (1 500 FCFA)<small>10:42</small></div>
+            <div class="bub you b2">Bonjour ! Demande bien reçue ✅ Nous vous confirmons le livreur et l'heure de passage.<small>10:43</small></div>
+            <div class="bub me b3">Parfait, merci 🙏<small>10:43</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zones" id="zones">
+  <div class="wrap">
+    <div class="rv">
+      <div class="radar">
+        <svg viewBox="0 0 400 400" role="img" aria-label="Schéma des zones de livraison autour d'Abidjan">
+          <circle cx="200" cy="200" r="185" fill="rgba(240,169,48,.06)" stroke="rgba(240,169,48,.5)" stroke-width="2" stroke-dasharray="6 8"/>
+          <circle cx="200" cy="200" r="130" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="6 8"/>
+          <circle cx="200" cy="200" r="70" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-width="2"/>
+          <circle class="pulse" cx="200" cy="200" r="70" fill="none" stroke="#f0a930" stroke-width="3"/>
+          <text x="200" y="196" text-anchor="middle" fill="#fff" font-size="17" font-weight="800" font-family="system-ui,Arial">Abidjan</text>
+          <text x="200" y="218" text-anchor="middle" fill="#f0a930" font-size="16" font-weight="900" font-family="system-ui,Arial">1 500 FCFA</text>
+          <g font-family="system-ui,Arial" font-weight="800" text-anchor="middle">
+            <circle cx="299" cy="108" r="7" fill="#fff"/><text x="299" y="88" fill="#fff" font-size="14">Bingerville</text><text x="299" y="130" fill="#f0a930" font-size="13">2 000 FCFA</text>
+            <circle cx="95" cy="299" r="7" fill="#f0a930"/><text x="95" y="322" fill="#fff" font-size="13">Songon</text><text x="95" y="338" fill="#f0a930" font-size="12">2 500 FCFA</text>
+            <circle cx="70" cy="105" r="7" fill="#f0a930"/><text x="70" y="86" fill="#fff" font-size="13">Anyama</text><text x="70" y="126" fill="#f0a930" font-size="12">2 500 FCFA</text>
+            <circle cx="322" cy="300" r="7" fill="#f0a930"/><text x="322" y="323" fill="#fff" font-size="13">Grand-Bassam</text><text x="322" y="339" fill="#f0a930" font-size="12">2 500 FCFA</text>
+          </g>
+        </svg>
+        <div class="cap">Schéma illustratif des zones et tarifs</div>
+      </div>
+      <div class="pic2"><img src="colis.jpg" width="608" height="396" alt="Colis Tamaris prêts à être livrés" loading="lazy"></div>
+    </div>
+    <div class="rv d1">
+      <span class="eyebrow">Zones desservies</span>
+      <h2>On livre dans tout Abidjan et ses environs</h2>
+      <p class="lead">Toutes les communes d'Abidjan au même tarif, et les villes voisines à petit prix.</p>
+      <div class="chips">
+        <span class="chip"><svg><use href="#i-pin"/></svg>Cocody</span><span class="chip"><svg><use href="#i-pin"/></svg>Plateau</span><span class="chip"><svg><use href="#i-pin"/></svg>Marcory</span><span class="chip"><svg><use href="#i-pin"/></svg>Treichville</span><span class="chip"><svg><use href="#i-pin"/></svg>Koumassi</span><span class="chip"><svg><use href="#i-pin"/></svg>Port-Bouët</span><span class="chip"><svg><use href="#i-pin"/></svg>Yopougon</span><span class="chip"><svg><use href="#i-pin"/></svg>Abobo</span><span class="chip"><svg><use href="#i-pin"/></svg>Adjamé</span><span class="chip"><svg><use href="#i-pin"/></svg>Attécoubé</span>
+      </div>
+      <div class="chips" style="margin-top:0">
+        <span class="chip far"><svg><use href="#i-pin"/></svg>Bingerville</span><span class="chip far"><svg><use href="#i-pin"/></svg>Grand-Bassam</span><span class="chip far"><svg><use href="#i-pin"/></svg>Songon</span><span class="chip far"><svg><use href="#i-pin"/></svg>Anyama</span>
+      </div>
+      <div class="zl">
+        <div class="r"><span>Abidjan (toutes communes)</span><b>1 500 FCFA</b></div>
+        <div class="r"><span>Bingerville</span><b>2 000 FCFA</b></div>
+        <div class="r"><span>Grand-Bassam / Songon / Anyama</span><b>2 500 FCFA</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="reserver">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Réservation</span>
+      <h2>Réservez votre livraison en 1 minute</h2>
+      <p class="lead">Remplissez le formulaire : votre demande s'ouvre dans WhatsApp, prête à être envoyée. On vous confirme rapidement.</p>
+      <ul class="perks">
+        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Tarif affiché avant d'envoyer</li>
+        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Aucun compte, aucun mot de passe</li>
+        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Confirmation directe par WhatsApp</li>
+      </ul>
+      <p style="margin-top:24px"><a class="btn btn-wa" href="https://wa.me/2250100603038?text=Bonjour%20Tamaris%20Livraison%2C%20je%20voudrais%20des%20infos." target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Préférez écrire directement ?</a></p>
+    </div>
+    <form class="form rv d1" id="orderForm" novalidate>
+      <h3>Ma demande de livraison</h3>
+      <div class="fields">
+        <div><label for="o_name">Votre nom</label><input id="o_name" required placeholder="Ex : Awa Koné" autocomplete="name"></div>
+        <div><label for="o_phone">Votre téléphone</label><input id="o_phone" required inputmode="tel" placeholder="Ex : 07 00 00 00 00" autocomplete="tel"></div>
+        <div class="full"><label for="o_zone">Zone de livraison</label>
+          <select id="o_zone">
+            <option value="1500|Abidjan (toutes communes)">Abidjan (toutes communes) — 1 500 FCFA</option>
+            <option value="2000|Bingerville">Bingerville — 2 000 FCFA</option>
+            <option value="2500|Grand-Bassam / Songon / Anyama">Grand-Bassam / Songon / Anyama — 2 500 FCFA</option>
+          </select></div>
+        <div><label for="o_from">Adresse de récupération</label><input id="o_from" required placeholder="Quartier, repère"></div>
+        <div><label for="o_to">Adresse de livraison</label><input id="o_to" required placeholder="Quartier, repère"></div>
+        <div class="full"><label for="o_note">Description du colis (facultatif)</label><textarea id="o_note" rows="2" placeholder="Ex : 2 cartons, fragile, à payer à la livraison..."></textarea></div>
+      </div>
+      <div class="est"><span>Tarif de livraison</span><strong id="est">1 500 FCFA</strong></div>
+      <p class="err" id="orderErr">Merci de remplir votre nom, votre téléphone et les deux adresses.</p>
+      <div style="margin-top:18px"><button class="btn btn-wa btn-block" type="submit"><svg><use href="#i-chat"/></svg>Envoyer ma demande sur WhatsApp</button></div>
+      <p class="note">Le tarif est celui de la zone choisie. Pour une demande particulière, précisez-la dans la description.</p>
+    </form>
+  </div>
+</section>
+
+<section class="tips">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">Bon à savoir</span><h2>Pour une livraison sans accroc</h2><p class="lead">Quatre petits réflexes qui accélèrent votre livraison.</p></div>
+    <div class="grid g2">
+      <div class="tip rv"><div class="n">1</div><div><h3>Indiquez un repère précis</h3><p>Quartier, rue, bâtiment ou point connu à côté : le livreur vous trouve plus vite.</p></div></div>
+      <div class="tip rv d1"><div class="n">2</div><div><h3>Donnez le téléphone du destinataire</h3><p>Le livreur peut l'appeler à l'arrivée si besoin. Gardez votre téléphone à portée de main.</p></div></div>
+      <div class="tip rv"><div class="n">3</div><div><h3>Emballez bien votre colis</h3><p>Un carton fermé ou un sac solide protège vos articles, surtout s'ils sont fragiles.</p></div></div>
+      <div class="tip rv d1"><div class="n">4</div><div><h3>Précisez la taille du colis</h3><p>Petit, moyen ou grand : dites-le sur WhatsApp pour que nous confirmions la livraison.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta2 rv">
+      <div>
+        <span class="eyebrow" style="background:rgba(255,255,255,.12);color:var(--accent)">Commerçants</span>
+        <h2>Vous vendez en ligne ? Confiez-nous vos livraisons.</h2>
+        <p>Vous prenez les commandes, nous livrons vos clients à Abidjan et environs. Contactez-nous pour organiser un fonctionnement adapté à votre volume.</p>
+        <p style="margin-top:22px"><a class="btn btn-accent" href="https://wa.me/2250100603038?text=Bonjour%20Tamaris%20Livraison%2C%20je%20suis%20commer%C3%A7ant%20et%20je%20voudrais%20des%20infos%20sur%20vos%20livraisons%20r%C3%A9guli%C3%A8res." target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Parler à l'équipe</a></p>
+      </div>
+      <ul>
+        <li><svg><use href="#i-check"/></svg>Livraison le jour même</li>
+        <li><svg><use href="#i-check"/></svg>Un seul contact WhatsApp</li>
+        <li><svg><use href="#i-check"/></svg>Tarifs fixes par zone</li>
+        <li><svg><use href="#i-check"/></svg>Retours clients pris en charge</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="shop">
+  <div class="wrap center">
+    <span class="eyebrow">Notre boutique</span>
+    <h2>Découvrez aussi Tamaris Distribution</h2>
+    <p class="lead">Des produits variés à petit prix, livrés vite à Abidjan. Un aperçu de notre catalogue :</p>
+    <div class="grid g4">
+      <a class="prod rv" href="https://tamaris-distribution.vercel.app/produit/sefudun-kit-barbe" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/sefudun-kit-barbe.webp" alt="Kit entretien barbe premium" loading="lazy"><div><b>Kit Entretien Barbe Premium</b><span>13 000 FCFA</span></div></a>
+      <a class="prod rv d1" href="https://tamaris-distribution.vercel.app/produit/aromate-citron" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/aromate-citron.webp" alt="Huiles essentielles citron" loading="lazy"><div><b>5 Huiles Essentielles Citron</b><span>5 000 FCFA</span></div></a>
+      <a class="prod rv d2" href="https://tamaris-distribution.vercel.app/produit/sadoer-sc" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/sadoer-sc.webp" alt="Sérum anti-marques" loading="lazy"><div><b>Sérum Anti-Marques 40 ml</b><span>5 000 FCFA</span></div></a>
+      <a class="prod rv d2" href="https://tamaris-distribution.vercel.app/produit/statue-1" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/statue-1.webp" alt="Statue couple amoureux LOVE" loading="lazy"><div><b>Statue Couple Amoureux "LOVE"</b><span>15 000 FCFA</span></div></a>
+    </div>
+    <p style="margin-top:32px"><a class="btn btn-brand" href="https://tamaris-distribution.vercel.app" target="_blank" rel="noopener">Voir toute la boutique</a></p>
+  </div>
+</section>
+
+<section class="recruit" id="livreur">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <span class="eyebrow">Recrutement</span>
+        <h2 style="color:#fff">Devenez livreur Tamaris</h2>
+        <p class="lead">Nous recrutons des livreurs à moto à Abidjan. Postulez en 1 minute, nous vous répondons sur WhatsApp.</p>
+      </div>
+      <div class="rider rv"><img src="livreur.jpg" width="413" height="434" alt="Livreur Tamaris à moto avec l'application" loading="lazy"></div>
+    </div>
+    <div class="grid g3" style="margin-top:34px">
+      <div class="rc rv"><div class="ic"><svg><use href="#i-moto"/></svg></div><h3>Une moto en bon état</h3><p>Vous disposez de votre moto et des papiers en règle.</p></div>
+      <div class="rc rv d1"><div class="ic"><svg><use href="#i-pin"/></svg></div><h3>Bonne connaissance d'Abidjan</h3><p>Vous connaissez bien les communes et savez vous repérer vite.</p></div>
+      <div class="rc rv d2"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Sérieux et ponctuel</h3><p>Vous prenez soin des colis et respectez les horaires.</p></div>
+    </div>
+    <form class="form rv" id="driverForm" novalidate>
+      <h3>Ma candidature</h3>
+      <div class="fields">
+        <div><label for="d_name">Nom et prénoms</label><input id="d_name" required autocomplete="name"></div>
+        <div><label for="d_phone">Téléphone (WhatsApp)</label><input id="d_phone" required inputmode="tel" autocomplete="tel"></div>
+        <div><label for="d_zone">Commune où vous habitez</label><input id="d_zone" required placeholder="Ex : Yopougon"></div>
+        <div><label for="d_moto">Avez-vous une moto ?</label>
+          <select id="d_moto"><option>Oui, j'ai ma moto</option><option>Non, pas encore</option></select></div>
+        <div class="full"><label for="d_exp">Expérience de livraison (facultatif)</label><textarea id="d_exp" rows="2" placeholder="Ex : 2 ans de livraison pour des boutiques..."></textarea></div>
+      </div>
+      <p class="err" id="driverErr">Merci de remplir votre nom, votre téléphone et votre commune.</p>
+      <div style="margin-top:18px"><button class="btn btn-accent btn-block" type="submit"><svg><use href="#i-chat"/></svg>Postuler sur WhatsApp</button></div>
+      <p class="note">Les conditions de collaboration (rémunération, horaires) vous sont communiquées lors de l'échange sur WhatsApp.</p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">FAQ</span><h2>Questions fréquentes</h2></div>
+    <div class="faq" style="margin-top:28px">
+      <details><summary>Quelles zones desservez-vous ?</summary><p>Abidjan (toutes communes), Bingerville, Grand-Bassam, Songon et Anyama.</p></details>
+      <details><summary>Livrez-vous le jour même ?</summary><p>Oui, la livraison se fait à moto le jour même.</p></details>
+      <details><summary>Comment réserver ?</summary><p>Utilisez le formulaire de cette page ou écrivez-nous directement sur WhatsApp au 01 00 60 30 38.</p></details>
+      <details><summary>Je suis commerçant, puis-je livrer tous mes clients avec vous ?</summary><p>Oui. Contactez-nous sur WhatsApp pour organiser vos livraisons régulières.</p></details>
+      <details><summary>Combien coûte une livraison ?</summary><p>Le tarif est fixe selon la zone : 1 500 FCFA pour Abidjan (toutes communes), 2 000 FCFA pour Bingerville, 2 500 FCFA pour Grand-Bassam, Songon et Anyama.</p></details>
+      <details><summary>Quels types de colis pouvez-vous livrer ?</summary><p>Colis de boutiques en ligne, documents, cadeaux, petits et moyens paquets. Pour un colis volumineux ou particulier, décrivez-le sur WhatsApp et nous vous confirmons la faisabilité.</p></details>
+      <details><summary>Comment se passe le paiement ?</summary><p>Les modalités de paiement vous sont confirmées sur WhatsApp au moment de la réservation.</p></details>
+      <details><summary>Puis-je faire livrer un colis à quelqu'un d'autre ?</summary><p>Oui. Indiquez l'adresse de livraison et le téléphone du destinataire dans votre demande.</p></details>
+      <details><summary>Comment devenir livreur ?</summary><p>Remplissez le formulaire de candidature de cette page : nous vous répondons sur WhatsApp pour la suite.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div><h2>Un colis à envoyer aujourd'hui ?</h2><p>Réservez maintenant, on s'occupe du reste.</p></div>
+    <a class="btn btn-brand" href="#reserver">Réserver une livraison</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="max-width:300px"><strong style="color:#fff;font-size:1.05rem">Tamaris Livraison</strong><br>Service de livraison à moto pour commerçants et particuliers à Abidjan et environs. Un service de Tamaris Distribution.</div>
+    <div><strong style="color:#fff">Navigation</strong><br><a href="#tarifs">Tarifs</a><br><a href="#comment">Comment ça marche</a><br><a href="#zones">Zones desservies</a><br><a href="#reserver">Réserver</a></div>
+    <div><strong style="color:#fff">Rejoindre</strong><br><a href="#livreur">Devenir livreur</a><br><a href="#faq">FAQ</a></div>
+    <div><strong style="color:#fff">Contact</strong><br>WhatsApp : <a href="https://wa.me/2250100603038">01 00 60 30 38</a><br>Boutique : <a href="https://tamaris-distribution.vercel.app">tamaris-distribution.vercel.app</a></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-wa" href="https://wa.me/2250100603038?text=Bonjour%20Tamaris%20Livraison%2C%20je%20voudrais%20des%20infos." target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>WhatsApp</a>
+  <a class="btn btn-accent" href="#reserver">Réserver</a>
+</div>
+<a class="wa-float" href="https://wa.me/2250100603038?text=Bonjour%20Tamaris%20Livraison%2C%20je%20voudrais%20des%20infos." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-chat"/></svg></a>
+
+<script>
+const WA = "2250100603038";
+const fmt = n => n.toLocaleString("fr-FR").replace(/[  ]/g," ") + " FCFA";
+const zone = document.getElementById("o_zone");
+const est = document.getElementById("est");
+const updateEst = () => { est.textContent = fmt(parseInt(zone.value.split("|")[0],10)); };
+zone.addEventListener("change", updateEst);
+
+document.querySelectorAll(".zone").forEach(b => b.addEventListener("click", () => {
+  zone.selectedIndex = parseInt(b.dataset.zone,10);
+  updateEst();
+  document.getElementById("reserver").scrollIntoView({behavior:"smooth"});
+  setTimeout(() => document.getElementById("o_name").focus({preventScroll:true}), 600);
+}));
+
+function send(text){ window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(text), "_blank", "noopener"); }
+const val = id => document.getElementById(id).value.trim();
+
+document.getElementById("orderForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const err = document.getElementById("orderErr");
+  if(!val("o_name") || !val("o_phone") || !val("o_from") || !val("o_to")){ err.style.display="block"; return; }
+  err.style.display="none";
+  const [price, label] = zone.value.split("|");
+  const lines = [
+    "Bonjour Tamaris Livraison, je souhaite réserver une livraison.",
+    "Nom : " + val("o_name"),
+    "Téléphone : " + val("o_phone"),
+    "Récupération : " + val("o_from"),
+    "Livraison : " + val("o_to"),
+    "Zone : " + label + " (" + fmt(parseInt(price,10)) + ")"
+  ];
+  if(val("o_note")) lines.push("Colis : " + val("o_note"));
+  send(lines.join("\n"));
+});
+
+document.getElementById("driverForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const err = document.getElementById("driverErr");
+  if(!val("d_name") || !val("d_phone") || !val("d_zone")){ err.style.display="block"; return; }
+  err.style.display="none";
+  const lines = [
+    "Bonjour, je souhaite postuler comme livreur chez Tamaris Livraison.",
+    "Nom : " + val("d_name"),
+    "Téléphone : " + val("d_phone"),
+    "Commune : " + val("d_zone"),
+    "Moto : " + document.getElementById("d_moto").value
+  ];
+  if(val("d_exp")) lines.push("Expérience : " + val("d_exp"));
+  send(lines.join("\n"));
+});
+
+// scroll progress bar
+const prog = document.getElementById("prog");
+const onScroll = () => { const h = document.documentElement.scrollHeight - innerHeight; prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; };
+addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+// rotating hero word
+const rot = document.getElementById("rot");
+if(rot && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const words = ["à moto","rapidement","sans souci","en 1 message"];
+  let i = 0;
+  setInterval(() => {
+    rot.classList.add("out");
+    setTimeout(() => { i = (i + 1) % words.length; rot.textContent = words[i]; rot.classList.remove("out"); }, 350);
+  }, 2600);
+}
+
+// reveal on scroll
+const els = document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){
+  const io = new IntersectionObserver(es => es.forEach(x => { if(x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold:.12});
+  els.forEach(el => io.observe(el));
+} else { els.forEach(el => el.classList.add("in")); }
+</script>
+</body>
+</html>
