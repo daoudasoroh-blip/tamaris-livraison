@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tamaris Livraison — Livraison rapide à moto à Abidjan</title>
-<meta name="description" content="Tamaris Livraison : service de livraison à moto pour commerçants et particuliers à Abidjan et environs. Tarifs clairs, réservation directe sur WhatsApp.">
+<meta name="description" content="Tamaris Livraison : livraison à moto le jour même pour vendeurs en ligne et particuliers à Abidjan, avec paiement à la livraison. Dès 1 500 FCFA, réservation sur WhatsApp.">
 <meta property="og:title" content="Tamaris Livraison — Livraison rapide à moto à Abidjan">
-<meta property="og:description" content="Commerçants et particuliers : confiez-nous vos livraisons. Abidjan 1 500 FCFA. Réservation sur WhatsApp.">
+<meta property="og:description" content="Vous vendez, on livre et on encaisse pour vous. Abidjan 1 500 FCFA, paiement à la livraison, réservation sur WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="hero.jpg">
 <meta name="theme-color" content="#0a4c38">
@@ -119,6 +119,12 @@ header{position:sticky;top:0;z-index:40;background:rgba(8,61,45,.94);backdrop-fi
 .p1 .ico{background:rgba(255,255,255,.14);color:var(--accent)}
 .p2 .ico{background:#fde9bd;color:var(--accent-dark)}
 .panel .ico svg{width:28px;height:28px}
+
+/* cash on delivery */
+.cod{background:linear-gradient(180deg,#eaf5ef,#f4f7f5)}
+.cod .step h3{font-size:1.05rem}
+@media(max-width:980px){.cod .step::after{display:none!important}}
+@media(min-width:981px){.cod .step:not(:last-child)::after{content:"";position:absolute;top:52px;right:-22px;width:22px;height:3px;background:repeating-linear-gradient(90deg,var(--brand) 0 6px,transparent 6px 12px)}}
 
 /* steps */
 .steps{position:relative}
@@ -328,6 +334,7 @@ footer a{color:#fff;font-weight:700}
 .f2{right:18px;top:24px}
 @media(max-width:900px){
   .hero-bg{width:100%;opacity:.3;background-position:22% center;-webkit-mask-image:none;mask-image:none}
+  .hero .wrap{grid-template-columns:1fr}
   .hero .wrap>div:first-child{order:1}
 }
 
@@ -358,6 +365,7 @@ footer a{color:#fff;font-weight:700}
   <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 14H5z"/><path d="M9 7a3 3 0 016 0"/></symbol>
   <symbol id="i-return" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9 9 0 00-6.400 2.600L3 8"/><path d="M3 3v5h5"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
 </svg>
 
@@ -366,6 +374,7 @@ footer a{color:#fff;font-weight:700}
     <a class="logo" href="#top"><span class="logo-mark">TL</span> Tamaris Livraison</a>
     <ul>
       <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#encaissement">Paiement à la livraison</a></li>
       <li><a href="#comment">Comment ça marche</a></li>
       <li><a href="#zones">Zones</a></li>
       <li><a href="#livreur">Devenir livreur</a></li>
@@ -381,17 +390,17 @@ footer a{color:#fff;font-weight:700}
   <div class="hero-bg" role="img" aria-label="Camionnette et livreur à moto Tamaris à Abidjan"></div>
   <div class="wrap">
     <div>
-      <span class="eyebrow">Service de livraison · Abidjan &amp; environs</span>
-      <h1>Vos colis livrés <em class="rot" id="rot">à moto</em>, le jour même.</h1>
-      <p class="sub">Commerçants en ligne ou particuliers : confiez-nous vos livraisons. Un tarif clair, une réservation en 1 minute sur WhatsApp.</p>
+      <span class="eyebrow">Livraison pour vendeurs en ligne · Abidjan</span>
+      <h1>Vous vendez, on livre <em class="rot" id="rot">à moto</em> et on encaisse pour vous.</h1>
+      <p class="sub">Vos clients livrés le jour même, avec paiement à la livraison : le livreur récupère l'argent de la commande et nous vous le reversons. Tout se gère sur WhatsApp.</p>
       <div class="cta-row">
-        <a class="btn btn-accent" href="#reserver">Réserver une livraison</a>
-        <a class="btn btn-ghost" href="#tarifs">Voir les tarifs</a>
+        <a class="btn btn-accent" href="#reserver">Confier une livraison</a>
+        <a class="btn btn-ghost" href="#encaissement">Comment on encaisse</a>
       </div>
       <div class="quick">
         <div><svg><use href="#i-check"/></svg>Dès 1 500 FCFA</div>
+        <div><svg><use href="#i-check"/></svg>Paiement à la livraison</div>
         <div><svg><use href="#i-check"/></svg>Réservation sur WhatsApp</div>
-        <div><svg><use href="#i-check"/></svg>Pas de compte à créer</div>
       </div>
     </div>
     <div class="hero-visual">
@@ -412,15 +421,15 @@ footer a{color:#fff;font-weight:700}
       <div class="it"><span class="ic"><svg><use href="#i-bolt"/></svg></span><div><b>Rapide</b><span>Livraison à moto</span></div></div>
       <div class="it"><span class="ic"><svg><use href="#i-shield"/></svg></span><div><b>Sécurisée</b><span>Colis pris en charge</span></div></div>
       <div class="it"><span class="ic"><svg><use href="#i-pin"/></svg></span><div><b>Partout à Abidjan</b><span>Et communes voisines</span></div></div>
-      <div class="it"><span class="ic"><svg><use href="#i-box"/></svg></span><div><b>Tous types de colis</b><span>Petits et grands</span></div></div>
+      <div class="it"><span class="ic"><svg><use href="#i-cash"/></svg></span><div><b>On encaisse pour vous</b><span>Paiement à la livraison</span></div></div>
     </div>
   </div>
 </section>
 
 <div class="marq" aria-hidden="true">
   <div class="track">
-    <span>Livraison à moto</span><span>Le jour même</span><span>Abidjan · Bingerville · Grand-Bassam · Songon · Anyama</span><span>Dès 1 500 FCFA</span><span>Réservation sur WhatsApp</span><span>Pas de compte à créer</span>
-    <span>Livraison à moto</span><span>Le jour même</span><span>Abidjan · Bingerville · Grand-Bassam · Songon · Anyama</span><span>Dès 1 500 FCFA</span><span>Réservation sur WhatsApp</span><span>Pas de compte à créer</span>
+    <span>Livraison à moto</span><span>Le jour même</span><span>Abidjan · Bingerville · Grand-Bassam · Songon · Anyama</span><span>Dès 1 500 FCFA</span><span>Paiement à la livraison</span><span>Réservation sur WhatsApp</span>
+    <span>Livraison à moto</span><span>Le jour même</span><span>Abidjan · Bingerville · Grand-Bassam · Songon · Anyama</span><span>Dès 1 500 FCFA</span><span>Paiement à la livraison</span><span>Réservation sur WhatsApp</span>
   </div>
 </div>
 
@@ -453,6 +462,21 @@ footer a{color:#fff;font-weight:700}
   </div>
 </section>
 
+<section class="cod" id="encaissement">
+  <div class="wrap center">
+    <span class="eyebrow">Paiement à la livraison</span>
+    <h2>Votre client paie au livreur, on vous reverse l'argent</h2>
+    <p class="lead">Vos clients préfèrent payer à la réception ? Pas de problème : nous encaissons pour vous, sans que vous ayez à vous déplacer.</p>
+    <div class="grid g4" style="text-align:left">
+      <div class="step rv"><div class="num">1</div><h3>Vous nous envoyez la commande</h3><p>Sur WhatsApp : adresse du client, son téléphone et le montant à encaisser.</p></div>
+      <div class="step rv d1"><div class="num">2</div><h3>On récupère le colis</h3><p>Un livreur passe le chercher chez vous ou à votre point de retrait.</p></div>
+      <div class="step rv d2"><div class="num">3</div><h3>On livre et on encaisse</h3><p>Le client reçoit sa commande et paie le livreur, le jour même.</p></div>
+      <div class="step rv"><div class="num">4</div><h3>On vous reverse l'argent</h3><p>Le montant encaissé vous est reversé, frais de livraison déduits, avec le détail de chaque colis.</p></div>
+    </div>
+    <p style="margin-top:34px"><a class="btn btn-brand" href="https://wa.me/2250100603038?text=Bonjour%20Tamaris%20Livraison%2C%20je%20suis%20vendeur%20en%20ligne%20et%20je%20voudrais%20des%20infos%20sur%20le%20paiement%20%C3%A0%20la%20livraison." target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>En parler sur WhatsApp</a></p>
+  </div>
+</section>
+
 <section class="alt" style="background:#fff">
   <div class="wrap center">
     <span class="eyebrow">Ce que nous livrons</span>
@@ -481,8 +505,9 @@ footer a{color:#fff;font-weight:700}
         <h3>Commerçants en ligne</h3>
         <p>Vous vendez sur les réseaux sociaux, Jumia ou votre boutique ? Concentrez-vous sur vos ventes, on livre vos clients.</p>
         <ul>
-          <li><svg><use href="#i-check"/></svg>Livraisons régulières organisées avec vous</li>
           <li><svg><use href="#i-check"/></svg>Vos clients livrés le jour même</li>
+          <li><svg><use href="#i-check"/></svg>Paiement à la livraison : on encaisse pour vous</li>
+          <li><svg><use href="#i-check"/></svg>Livraisons régulières organisées avec vous</li>
           <li><svg><use href="#i-check"/></svg>Un seul contact WhatsApp pour tout gérer</li>
         </ul>
         <a class="btn btn-accent" href="#reserver">Confier mes livraisons</a>
@@ -510,7 +535,7 @@ footer a{color:#fff;font-weight:700}
     <div class="grid g3 steps" style="text-align:left">
       <div class="step rv"><div class="num">1</div><h3>Vous réservez</h3><p>Remplissez le formulaire ou écrivez-nous sur WhatsApp avec les adresses de récupération et de livraison.</p></div>
       <div class="step rv d1"><div class="num">2</div><h3>On récupère le colis</h3><p>Un livreur passe chercher le colis à l'adresse indiquée.</p></div>
-      <div class="step rv d2"><div class="num">3</div><h3>On livre</h3><p>Le colis est remis à votre client ou destinataire, le jour même.</p></div>
+      <div class="step rv d2"><div class="num">3</div><h3>On livre</h3><p>Le colis est remis à votre client ou destinataire, le jour même. Si le client paie à la livraison, le livreur encaisse pour vous.</p></div>
     </div>
     <div class="demo rv">
       <div>
@@ -600,7 +625,9 @@ footer a{color:#fff;font-weight:700}
           </select></div>
         <div><label for="o_from">Adresse de récupération</label><input id="o_from" required placeholder="Quartier, repère"></div>
         <div><label for="o_to">Adresse de livraison</label><input id="o_to" required placeholder="Quartier, repère"></div>
-        <div class="full"><label for="o_note">Description du colis (facultatif)</label><textarea id="o_note" rows="2" placeholder="Ex : 2 cartons, fragile, à payer à la livraison..."></textarea></div>
+        <div><label for="o_dest">Téléphone du client (facultatif)</label><input id="o_dest" inputmode="tel" placeholder="Pour que le livreur l'appelle"></div>
+        <div><label for="o_cash">Montant à encaisser (facultatif)</label><input id="o_cash" inputmode="numeric" placeholder="Ex : 12 000 — vide si déjà payé"></div>
+        <div class="full"><label for="o_note">Description du colis (facultatif)</label><textarea id="o_note" rows="2" placeholder="Ex : 2 cartons, fragile..."></textarea></div>
       </div>
       <div class="est"><span>Tarif de livraison</span><strong id="est">1 500 FCFA</strong></div>
       <p class="err" id="orderErr">Merci de remplir votre nom, votre téléphone et les deux adresses.</p>
@@ -698,6 +725,7 @@ footer a{color:#fff;font-weight:700}
       <details><summary>Je suis commerçant, puis-je livrer tous mes clients avec vous ?</summary><p>Oui. Contactez-nous sur WhatsApp pour organiser vos livraisons régulières.</p></details>
       <details><summary>Combien coûte une livraison ?</summary><p>Le tarif est fixe selon la zone : 1 500 FCFA pour Abidjan (toutes communes), 2 000 FCFA pour Bingerville, 2 500 FCFA pour Grand-Bassam, Songon et Anyama.</p></details>
       <details><summary>Quels types de colis pouvez-vous livrer ?</summary><p>Colis de boutiques en ligne, documents, cadeaux, petits et moyens paquets. Pour un colis volumineux ou particulier, décrivez-le sur WhatsApp et nous vous confirmons la faisabilité.</p></details>
+      <details><summary>Proposez-vous le paiement à la livraison ?</summary><p>Oui. Indiquez-nous le montant à encaisser : le livreur récupère l'argent auprès de votre client et nous vous le reversons, frais de livraison déduits, avec le détail de chaque colis.</p></details>
       <details><summary>Comment se passe le paiement ?</summary><p>Les modalités de paiement vous sont confirmées sur WhatsApp au moment de la réservation.</p></details>
       <details><summary>Puis-je faire livrer un colis à quelqu'un d'autre ?</summary><p>Oui. Indiquez l'adresse de livraison et le téléphone du destinataire dans votre demande.</p></details>
       <details><summary>Comment devenir livreur ?</summary><p>Remplissez le formulaire de candidature de cette page : nous vous répondons sur WhatsApp pour la suite.</p></details>
@@ -761,6 +789,9 @@ document.getElementById("orderForm").addEventListener("submit", e => {
     "Livraison : " + val("o_to"),
     "Zone : " + label + " (" + fmt(parseInt(price,10)) + ")"
   ];
+  if(val("o_dest")) lines.push("Téléphone du client : " + val("o_dest"));
+  const cash = val("o_cash").replace(/\D/g,"");
+  lines.push(cash ? "Montant à encaisser : " + fmt(parseInt(cash,10)) : "Montant à encaisser : aucun (déjà payé)");
   if(val("o_note")) lines.push("Colis : " + val("o_note"));
   send(lines.join("\n"));
 });
