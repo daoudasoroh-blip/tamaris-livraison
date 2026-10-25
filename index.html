@@ -840,6 +840,17 @@ const rot = document.getElementById("rot");
 if(rot && !matchMedia("(prefers-reduced-motion: reduce)").matches){
   const words = ["à moto","rapidement","sans souci","en 1 message"];
   let i = 0;
+  // reserve the width of the longest word so the title (and the image below) never jumps
+  const fit = () => {
+    rot.style.minWidth = "";
+    const cur = rot.textContent;
+    let w = 0;
+    for(const x of words){ rot.textContent = x; w = Math.max(w, rot.getBoundingClientRect().width); }
+    rot.textContent = cur;
+    rot.style.minWidth = Math.ceil(w) + "px";
+  };
+  fit(); addEventListener("resize", fit);
+  if(document.fonts) document.fonts.ready.then(fit);
   setInterval(() => {
     rot.classList.add("out");
     setTimeout(() => { i = (i + 1) % words.length; rot.textContent = words[i]; rot.classList.remove("out"); }, 350);
