@@ -324,20 +324,17 @@ footer a{color:#fff;font-weight:700}
   .hero .wrap{grid-template-columns:1fr}
 }
 
-/* hero: full scene (man, van, moto) across the width, text in the middle */
-.hero-bg{left:0;right:0;width:100%;background:url(hero.jpg) center 30%/cover no-repeat;-webkit-mask-image:none;mask-image:none}
-.hero-bg::after{background:linear-gradient(90deg,rgba(8,61,45,0) 24%,rgba(8,61,45,.85) 34%,rgba(8,61,45,.85) 60%,rgba(8,61,45,0) 68%),linear-gradient(180deg,rgba(8,61,45,.3),rgba(8,61,45,0) 30%,rgba(8,61,45,.35))}
-.hero .wrap{grid-template-columns:1fr}
-.hero .wrap>div:first-child{width:min(500px,34vw);margin:0 auto;position:relative;left:-3vw}
-.hero h1{font-size:clamp(2rem,3.2vw,2.9rem)}
-.hero-visual{display:none}
+/* hero: text on the left, photo of the Treichville shop and the delivery team on the right */
+.hero-bg{display:none}
+.hero .wrap{grid-template-columns:1fr 1.1fr}
+.hero-visual{display:block;min-height:0}
+.hero-visual .photo{display:block}
+.hero-visual .photo img{aspect-ratio:3/2;object-fit:cover;object-position:100% center}
+.hero-visual .f2{top:auto;right:auto;bottom:-18px;left:-18px}
 .f1{display:none}
 @media(max-width:900px){
-  .hero-bg{display:none}
-  .hero .wrap>div:first-child{width:auto;left:0}
-  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem)}
-  .hero-visual{display:block;min-height:0;margin-top:8px}
-  .hero-visual .photo{display:block;transform:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-visual .photo{transform:none}
   .hero-visual .f2{display:none}
 }
 
@@ -390,7 +387,7 @@ footer a{color:#fff;font-weight:700}
 <main id="top">
 
 <section class="hero">
-  <div class="hero-bg" role="img" aria-label="Camionnette et livreur à moto Tamaris à Abidjan"></div>
+  <div class="hero-bg" role="img" aria-label="Boutique Tamaris à Treichville avec la camionnette et les livreurs à moto"></div>
   <div class="wrap">
     <div>
       <span class="eyebrow">Livraison pour vendeurs en ligne · Abidjan</span>
@@ -407,7 +404,7 @@ footer a{color:#fff;font-weight:700}
       </div>
     </div>
     <div class="hero-visual">
-      <div class="photo"><img src="hero.jpg" width="1043" height="724" alt="Livreur Tamaris avec un colis, camionnette et livreur à moto à Abidjan" fetchpriority="high"></div>
+      <div class="photo"><img src="hero-boutique.webp" width="1983" height="793" alt="Boutique Tamaris à Treichville avec la camionnette et les livreurs à moto" fetchpriority="high"></div>
       <div class="float f1"><span class="ic"><svg><use href="#i-clock"/></svg></span><span>Livraison le jour même<small>À moto, dans Abidjan</small></span></div>
       <div class="float f2"><span class="ic"><svg><use href="#i-pin"/></svg></span><span>Dès 1 000 FCFA<small>À Treichville</small></span></div>
     </div>
