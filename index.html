@@ -324,28 +324,21 @@ footer a{color:#fff;font-weight:700}
   .hero .wrap{grid-template-columns:1fr}
 }
 
-/* hero: delivery man with the carton on the left, text on the right */
-.hero-bg{right:auto;left:0;width:min(68%,1200px);background:url(hero-man3.jpg) left center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,#000 55%,transparent 100%);mask-image:linear-gradient(90deg,#000 55%,transparent 100%)}
-.hero .wrap>div:first-child{order:2}
-.hero .wrap>.hero-visual{order:1}
-.hero .wrap{grid-template-columns:1fr 1fr}
-.hero-visual{min-height:440px}
+/* hero: full scene (man, van, moto) across the width, text in the middle */
+.hero-bg{left:0;right:0;width:100%;background:url(hero.jpg) center 30%/cover no-repeat;-webkit-mask-image:none;mask-image:none}
+.hero-bg::after{background:linear-gradient(90deg,rgba(8,61,45,0) 24%,rgba(8,61,45,.85) 34%,rgba(8,61,45,.85) 60%,rgba(8,61,45,0) 68%),linear-gradient(180deg,rgba(8,61,45,.3),rgba(8,61,45,0) 30%,rgba(8,61,45,.35))}
+.hero .wrap{grid-template-columns:1fr}
+.hero .wrap>div:first-child{width:min(500px,34vw);margin:0 auto;position:relative;left:-3vw}
+.hero h1{font-size:clamp(2rem,3.2vw,2.9rem)}
+.hero-visual{display:none}
 .f1{display:none}
-.f2{right:18px;top:24px}
-/* hero: delivery moto inset */
-.moto{position:absolute;right:-6px;bottom:0;width:270px;margin:0;border-radius:20px;overflow:hidden;border:4px solid #fff;box-shadow:var(--shadow-lg);transform:rotate(-2deg);background:#fff;z-index:2}
-.moto .ph{aspect-ratio:1/1;overflow:hidden}
-.moto img{display:block;width:128%;max-width:none;height:auto;margin:0}
-.moto figcaption{display:flex;align-items:center;gap:6px;padding:8px 12px;font-size:.8rem;font-weight:800;color:var(--brand-dark)}
-.moto figcaption svg{width:16px;height:16px;color:var(--accent)}
 @media(max-width:900px){
-  .hero-bg{width:100%;opacity:.3;background-position:22% center;-webkit-mask-image:none;mask-image:none}
-  .hero .wrap{grid-template-columns:1fr}
-  .hero .wrap>div:first-child{order:1}
-  .hero .wrap>.hero-visual{display:block;min-height:0;order:2;margin-top:6px}
+  .hero-bg{display:none}
+  .hero .wrap>div:first-child{width:auto;left:0}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+  .hero-visual{display:block;min-height:0;margin-top:8px}
+  .hero-visual .photo{display:block;transform:none}
   .hero-visual .f2{display:none}
-  .moto{position:relative;right:auto;bottom:auto;width:100%;max-width:380px;margin:0 auto;transform:none}
-  .moto .ph{aspect-ratio:16/11}
 }
 
 /* reveal */
@@ -417,7 +410,6 @@ footer a{color:#fff;font-weight:700}
       <div class="photo"><img src="hero.jpg" width="1043" height="724" alt="Livreur Tamaris avec un colis, camionnette et livreur à moto à Abidjan" fetchpriority="high"></div>
       <div class="float f1"><span class="ic"><svg><use href="#i-clock"/></svg></span><span>Livraison le jour même<small>À moto, dans Abidjan</small></span></div>
       <div class="float f2"><span class="ic"><svg><use href="#i-pin"/></svg></span><span>Dès 1 000 FCFA<small>À Treichville</small></span></div>
-      <figure class="moto"><div class="ph"><img src="livreur.jpg" width="413" height="434" alt="Livreur Tamaris à moto avec son coffre de livraison"></div><figcaption><svg><use href="#i-clock"/></svg>Livraison à moto, le jour même</figcaption></figure>
     </div>
   </div>
   <div class="road" aria-hidden="true">
