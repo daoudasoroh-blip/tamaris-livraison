@@ -332,10 +332,20 @@ footer a{color:#fff;font-weight:700}
 .hero-visual{min-height:440px}
 .f1{display:none}
 .f2{right:18px;top:24px}
+/* hero: delivery moto inset */
+.moto{position:absolute;right:-6px;bottom:0;width:270px;margin:0;border-radius:20px;overflow:hidden;border:4px solid #fff;box-shadow:var(--shadow-lg);transform:rotate(-2deg);background:#fff;z-index:2}
+.moto .ph{aspect-ratio:1/1;overflow:hidden}
+.moto img{display:block;width:128%;max-width:none;height:auto;margin:0}
+.moto figcaption{display:flex;align-items:center;gap:6px;padding:8px 12px;font-size:.8rem;font-weight:800;color:var(--brand-dark)}
+.moto figcaption svg{width:16px;height:16px;color:var(--accent)}
 @media(max-width:900px){
   .hero-bg{width:100%;opacity:.3;background-position:22% center;-webkit-mask-image:none;mask-image:none}
   .hero .wrap{grid-template-columns:1fr}
   .hero .wrap>div:first-child{order:1}
+  .hero .wrap>.hero-visual{display:block;min-height:0;order:2;margin-top:6px}
+  .hero-visual .f2{display:none}
+  .moto{position:relative;right:auto;bottom:auto;width:100%;max-width:380px;margin:0 auto;transform:none}
+  .moto .ph{aspect-ratio:16/11}
 }
 
 /* reveal */
@@ -407,6 +417,7 @@ footer a{color:#fff;font-weight:700}
       <div class="photo"><img src="hero.jpg" width="1043" height="724" alt="Livreur Tamaris avec un colis, camionnette et livreur à moto à Abidjan" fetchpriority="high"></div>
       <div class="float f1"><span class="ic"><svg><use href="#i-clock"/></svg></span><span>Livraison le jour même<small>À moto, dans Abidjan</small></span></div>
       <div class="float f2"><span class="ic"><svg><use href="#i-pin"/></svg></span><span>Dès 1 000 FCFA<small>À Treichville</small></span></div>
+      <figure class="moto"><div class="ph"><img src="livreur.jpg" width="413" height="434" alt="Livreur Tamaris à moto avec son coffre de livraison"></div><figcaption><svg><use href="#i-clock"/></svg>Livraison à moto, le jour même</figcaption></figure>
     </div>
   </div>
   <div class="road" aria-hidden="true">
