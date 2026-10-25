@@ -347,6 +347,22 @@ footer a{color:#fff;font-weight:700}
   .hero-visual .f2{display:none}
 }
 
+/* bottom of page: compact shop banner and footer */
+.shop-mini{padding:36px 0}
+.shopbar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff;border:1px solid #e3ece8;border-radius:20px;padding:22px 26px}
+.shopbar h3{margin:8px 0 4px;font-size:1.2rem}
+.shopbar p{margin:0;color:var(--muted)}
+@media(max-width:700px){
+  footer .wrap{display:grid!important;grid-template-columns:1fr 1fr;gap:18px 20px}
+  footer .wrap>div:first-child,footer .wrap>div:last-child{grid-column:1/-1;max-width:none!important}
+  .recruit .rider{display:none}
+  .recruit .grid.g3{gap:10px;margin-top:22px!important}
+  .recruit .rc{padding:14px 16px;display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}
+  .recruit .rc .ic{margin:0;grid-row:span 2}
+  .recruit .rc h3{margin:0;font-size:1rem}
+  .recruit .rc p{margin:2px 0 0;font-size:.88rem}
+}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -655,49 +671,12 @@ footer a{color:#fff;font-weight:700}
   </div>
 </section>
 
-<section class="tips">
+<section class="shop shop-mini">
   <div class="wrap">
-    <div class="center"><span class="eyebrow">Bon à savoir</span><h2>Pour une livraison sans accroc</h2><p class="lead">Quatre petits réflexes qui accélèrent votre livraison.</p></div>
-    <div class="grid g2">
-      <div class="tip rv"><div class="n">1</div><div><h3>Indiquez un repère précis</h3><p>Quartier, rue, bâtiment ou point connu à côté : le livreur vous trouve plus vite.</p></div></div>
-      <div class="tip rv d1"><div class="n">2</div><div><h3>Donnez le téléphone du destinataire</h3><p>Le livreur peut l'appeler à l'arrivée si besoin. Gardez votre téléphone à portée de main.</p></div></div>
-      <div class="tip rv"><div class="n">3</div><div><h3>Emballez bien votre colis</h3><p>Un carton fermé ou un sac solide protège vos articles, surtout s'ils sont fragiles.</p></div></div>
-      <div class="tip rv d1"><div class="n">4</div><div><h3>Précisez la taille du colis</h3><p>Petit, moyen ou grand : dites-le sur WhatsApp pour que nous confirmions la livraison.</p></div></div>
+    <div class="shopbar rv">
+      <div><span class="eyebrow">Notre boutique</span><h3>Découvrez aussi Tamaris Distribution</h3><p>Des produits variés à petit prix, livrés vite à Abidjan.</p></div>
+      <a class="btn btn-brand" href="https://tamaris-distribution.vercel.app" target="_blank" rel="noopener">Voir la boutique</a>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="cta2 rv">
-      <div>
-        <span class="eyebrow" style="background:rgba(255,255,255,.12);color:var(--accent)">Commerçants</span>
-        <h2>Vous vendez en ligne ? Confiez-nous vos livraisons.</h2>
-        <p>Vous prenez les commandes, nous livrons vos clients à Abidjan et environs. Contactez-nous pour organiser un fonctionnement adapté à votre volume.</p>
-        <p style="margin-top:22px"><a class="btn btn-accent" href="https://wa.me/2250100603038?text=Bonjour%20Tamaris%20Livraison%2C%20je%20suis%20commer%C3%A7ant%20et%20je%20voudrais%20des%20infos%20sur%20vos%20livraisons%20r%C3%A9guli%C3%A8res." target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Parler à l'équipe</a></p>
-      </div>
-      <ul>
-        <li><svg><use href="#i-check"/></svg>Livraison le jour même</li>
-        <li><svg><use href="#i-check"/></svg>Un seul contact WhatsApp</li>
-        <li><svg><use href="#i-check"/></svg>Tarifs fixes par zone</li>
-        <li><svg><use href="#i-check"/></svg>Retours clients pris en charge</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="shop">
-  <div class="wrap center">
-    <span class="eyebrow">Notre boutique</span>
-    <h2>Découvrez aussi Tamaris Distribution</h2>
-    <p class="lead">Des produits variés à petit prix, livrés vite à Abidjan. Un aperçu de notre catalogue :</p>
-    <div class="grid g4">
-      <a class="prod rv" href="https://tamaris-distribution.vercel.app/produit/sefudun-kit-barbe" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/sefudun-kit-barbe.webp" alt="Kit entretien barbe premium" loading="lazy"><div><b>Kit Entretien Barbe Premium</b><span>13 000 FCFA</span></div></a>
-      <a class="prod rv d1" href="https://tamaris-distribution.vercel.app/produit/aromate-citron" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/aromate-citron.webp" alt="Huiles essentielles citron" loading="lazy"><div><b>5 Huiles Essentielles Citron</b><span>5 000 FCFA</span></div></a>
-      <a class="prod rv d2" href="https://tamaris-distribution.vercel.app/produit/sadoer-sc" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/sadoer-sc.webp" alt="Sérum anti-marques" loading="lazy"><div><b>Sérum Anti-Marques 40 ml</b><span>5 000 FCFA</span></div></a>
-      <a class="prod rv d2" href="https://tamaris-distribution.vercel.app/produit/statue-1" target="_blank" rel="noopener"><img src="https://tamaris-distribution.vercel.app/products/statue-1.webp" alt="Statue couple amoureux LOVE" loading="lazy"><div><b>Statue Couple Amoureux "LOVE"</b><span>15 000 FCFA</span></div></a>
-    </div>
-    <p style="margin-top:32px"><a class="btn btn-brand" href="https://tamaris-distribution.vercel.app" target="_blank" rel="noopener">Voir toute la boutique</a></p>
   </div>
 </section>
 
@@ -762,7 +741,7 @@ footer a{color:#fff;font-weight:700}
 
 <footer>
   <div class="wrap">
-    <div style="max-width:300px"><strong style="color:#fff;font-size:1.05rem">Tamaris Livraison</strong><br>Service de livraison à moto pour commerçants et particuliers à Abidjan et environs. Un service de Tamaris Distribution.</div>
+    <div style="max-width:300px"><strong style="color:#fff;font-size:1.05rem">Tamaris Livraison</strong><br>Livraison à moto à Abidjan et environs. Treichville, Avenue 23, Rue 38.</div>
     <div><strong style="color:#fff">Navigation</strong><br><a href="#tarifs">Tarifs</a><br><a href="#comment">Comment ça marche</a><br><a href="#zones">Zones desservies</a><br><a href="#reserver">Réserver</a></div>
     <div><strong style="color:#fff">Rejoindre</strong><br><a href="#livreur">Devenir livreur</a><br><a href="#faq">FAQ</a></div>
     <div><strong style="color:#fff">Contact</strong><br>WhatsApp : <a href="https://wa.me/2250100603038">01 00 60 30 38</a><br>Boutique : <a href="https://tamaris-distribution.vercel.app">tamaris-distribution.vercel.app</a></div>
