@@ -324,17 +324,26 @@ footer a{color:#fff;font-weight:700}
   .hero .wrap{grid-template-columns:1fr}
 }
 
-/* hero: text on the left, photo of the Treichville shop and the delivery team on the right */
-.hero-bg{display:none}
-.hero .wrap{grid-template-columns:1fr 1.1fr}
-.hero-visual{display:block;min-height:0}
-.hero-visual .photo{display:block}
-.hero-visual .photo img{aspect-ratio:3/2;object-fit:cover;object-position:100% center}
-.hero-visual .f2{top:auto;right:auto;bottom:-18px;left:-18px}
+/* hero: Treichville shop photo across the whole hero, text on the left over the van */
+.hero{min-height:40vw;display:flex;align-items:center}
+.hero .wrap{width:100%;max-width:none;padding-left:max(20px,4vw);grid-template-columns:1fr}
+.hero .wrap>div:first-child{width:min(470px,35vw)}
+.hero h1{font-size:clamp(1.9rem,3vw,3rem)}
+.hero p.sub{font-size:1.02rem}
+.hero-bg{display:block;left:0;right:0;width:100%;background:url(hero-boutique.webp) center/cover no-repeat;-webkit-mask-image:none;mask-image:none}
+.hero-bg::after{background:linear-gradient(90deg,rgba(8,61,45,.92) 0,rgba(8,61,45,.82) 30%,rgba(8,61,45,0) 42%),linear-gradient(180deg,rgba(8,61,45,.25),rgba(8,61,45,0) 25%,rgba(8,61,45,0) 80%,rgba(8,61,45,.4))}
+.hero::before{display:none}
+.hero-visual{display:none}
 .f1{display:none}
 @media(max-width:900px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-visual .photo{transform:none}
+  .hero{min-height:0;display:block}
+  .hero .wrap>div:first-child{width:auto}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+  .hero-bg{display:none}
+  .hero::before{display:block}
+  .hero-visual{display:block;min-height:0;margin:8px -20px 0}
+  .hero-visual .photo{display:block;transform:none;border-radius:0;border:0;box-shadow:none}
+  .hero-visual .photo img{aspect-ratio:4/3;object-fit:cover;object-position:80% center}
   .hero-visual .f2{display:none}
 }
 
