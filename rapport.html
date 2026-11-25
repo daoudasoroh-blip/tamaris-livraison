@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a4c38">
+<title>Rapport Livreur Tamaris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Layout: one narrow phone column — form sections stacked, live receipt-style message at the bottom, sticky total bar */
+:root{
+  --bg:#f4f7f5; --card:#ffffff; --ink:#16241f; --muted:#5b6b65; --line:#dfe8e3;
+  --brand:#0f6b4f; --brand-ink:#ffffff; --brand-soft:#e3f1eb; --accent:#f0a930; --accent-ink:#2b1d02;
+  --danger:#b4412f; --field:#f7faf8;
+  --f-display:"Space Grotesk",system-ui,sans-serif; --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c1714; --card:#13221d; --ink:#e6efeb; --muted:#93a8a0; --line:#24382f;
+  --brand:#2fa57e; --brand-ink:#04140e; --brand-soft:#173329; --accent:#f3b54a; --accent-ink:#2b1d02;
+  --danger:#e57a66; --field:#0f1c18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1714; --card:#13221d; --ink:#e6efeb; --muted:#93a8a0; --line:#24382f;
+  --brand:#2fa57e; --brand-ink:#04140e; --brand-soft:#173329; --accent:#f3b54a; --accent-ink:#2b1d02;
+  --danger:#e57a66; --field:#0f1c18; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 96px}
+.wrap{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+header{padding-block:20px 4px;display:flex;align-items:center;gap:12px}
+.logo{width:42px;height:42px;border-radius:12px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;flex:none}
+h1{font-family:var(--f-display);font-size:1.3rem;margin:0;text-wrap:balance}
+header p{margin:0;color:var(--muted);font-size:.85rem}
+.banner{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:10px 12px;font-size:.85rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:12px}
+h2{font-family:var(--f-display);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin:0;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{display:flex;flex-direction:column;gap:4px;font-size:.8rem;color:var(--muted);font-weight:500;min-width:0}
+input,textarea{font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%;min-width:0}
+input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=number]{font-variant-numeric:tabular-nums}
+.stats{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border-radius:999px;padding:4px 10px;font-size:.8rem;font-weight:600;background:var(--field);border:1px solid var(--line);font-variant-numeric:tabular-nums}
+.chip.ok{background:var(--brand-soft);color:var(--brand);border-color:transparent}
+.chip.warn{color:var(--danger)}
+.zone{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding-block:6px;border-top:1px solid var(--line)}
+.zone:first-of-type{border-top:0}
+.zname{min-width:0}
+.zname b{display:block;font-weight:600}
+.zname small{color:var(--muted);font-variant-numeric:tabular-nums}
+.step{display:flex;align-items:center;gap:6px}
+.step button{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--field);color:var(--ink);font-size:1.2rem;font-weight:600;cursor:pointer}
+.step input{width:56px;text-align:center;padding:8px 4px}
+.edit-row{display:grid;grid-template-columns:1fr 100px 38px;gap:8px;align-items:center}
+.exp-row{display:grid;grid-template-columns:110px 1fr 38px;gap:8px;align-items:center}
+.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--danger);cursor:pointer;font-size:1.1rem}
+.link-btn{background:none;border:0;color:var(--brand);font:inherit;font-weight:600;font-size:.8rem;cursor:pointer;padding:4px 0;text-transform:none;letter-spacing:0}
+.add{align-self:flex-start;background:none;border:1px dashed var(--line);border-radius:10px;padding:8px 12px;color:var(--brand);font:inherit;font-weight:600;cursor:pointer}
+.total{display:flex;justify-content:space-between;font-weight:600;font-variant-numeric:tabular-nums;padding-top:8px;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.split div{border-radius:12px;padding:12px;background:var(--field);border:1px solid var(--line)}
+.split div.me{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.split small{display:block;font-size:.75rem;opacity:.85}
+.split strong{font-family:var(--f-display);font-size:1.25rem;font-variant-numeric:tabular-nums}
+.pct{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted)}
+.pct input{width:70px;padding:6px 8px}
+pre{font-family:var(--mono);font-size:.8rem;white-space:pre-wrap;word-break:break-word;background:var(--field);border:1px solid var(--line);border-radius:10px;padding:12px;margin:0;max-height:360px;overflow:auto}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;border-radius:12px;padding:12px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;border:0}
+.btn.primary{background:var(--brand);color:var(--brand-ink)}
+.btn.ghost{background:var(--field);color:var(--ink);border:1px solid var(--line)}
+.note{font-size:.8rem;color:var(--muted);margin:0}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));z-index:5}
+.bar .in{max-width:560px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.bar small{color:var(--muted);display:block;font-size:.75rem}
+.bar strong{font-family:var(--f-display);font-size:1.15rem;font-variant-numeric:tabular-nums}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px;font-size:.85rem;font-weight:600;z-index:6}
+@media (max-width:380px){.exp-row{grid-template-columns:90px 1fr 38px}.edit-row{grid-template-columns:1fr 80px 38px}}
+@media (prefers-reduced-motion:no-preference){.btn,.step button{transition:transform .08s}.btn:active,.step button:active{transform:scale(.97)}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="logo">TL</div>
+    <div><h1>Rapport journalier</h1><p>Tamaris Livraison · à remplir chaque soir par le livreur</p></div>
+  </header>
+
+  <div class="banner" id="exampleBanner" hidden>
+    <span>Ce sont des chiffres d'exemple.</span>
+    <button class="link-btn" id="resetBtn" type="button">Commencer un nouveau rapport</button>
+  </div>
+
+  <section>
+    <h2>Livreur</h2>
+    <div class="grid2">
+      <label>Nom<input id="nom" type="text" autocomplete="name" placeholder="Ex. Koffi"></label>
+      <label>Date<input id="date" type="date"></label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Livraisons</h2>
+    <label>Colis reçus<input id="recus" type="number" inputmode="numeric" min="0" placeholder="0"></label>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section>
+    <h2>Détail par zone <button class="link-btn" id="editZonesBtn" type="button">Modifier les tarifs</button></h2>
+    <div id="zones"></div>
+    <div id="zonesEdit" hidden></div>
+    <div class="total"><span>Total livraisons</span><span id="totalLiv">0 F</span></div>
+  </section>
+
+  <section>
+    <h2>Dépenses</h2>
+    <label>Carburant (F)<input id="carbu" type="number" inputmode="numeric" min="0" placeholder="0"></label>
+    <div id="extras" style="display:flex;flex-direction:column;gap:8px"></div>
+    <button class="add" id="addExtra" type="button">+ Ajouter une dépense extra</button>
+    <div class="total"><span>Total dépenses</span><span id="totalDep">0 F</span></div>
+  </section>
+
+  <section>
+    <h2>Répartition</h2>
+    <div class="total" style="border-top:0;padding-top:0"><span>Bénéfice net</span><span id="benef">0 F</span></div>
+    <div class="split">
+      <div class="me"><small id="lblLiv">Part livreur (60 %)</small><strong id="partLiv">0 F</strong></div>
+      <div><small id="lblTam">Part Tamaris (40 %)</small><strong id="partTam">0 F</strong></div>
+    </div>
+    <div class="pct">Part du livreur <input id="pct" type="number" min="0" max="100" inputmode="numeric"> %</div>
+  </section>
+
+  <section>
+    <h2>Remarques</h2>
+    <textarea id="rem" rows="2" placeholder="RAS"></textarea>
+  </section>
+
+  <section>
+    <h2>Message à envoyer</h2>
+    <pre id="msg"></pre>
+    <div class="actions">
+      <button class="btn primary" id="copyBtn" type="button">Copier le rapport</button>
+      <a class="btn ghost" id="waBtn" href="#" rel="noopener">Ouvrir WhatsApp</a>
+    </div>
+    <p class="note"><b>Pour envoyer avec la photo du reçu :</b> 1. Appuyez sur « Copier le rapport ». 2. Dans WhatsApp, ouvrez la conversation Tamaris Livraison (01 00 60 30 38), appuyez sur 📎 ou 📷 et choisissez la photo du reçu de carburant. 3. Collez le rapport dans la légende sous la photo, puis envoyez. Le rapport et le reçu arrivent ensemble en un seul message.</p>
+  </section>
+</div>
+
+<div class="bar"><div class="in">
+  <div><small>Bénéfice net</small><strong id="barBenef">0 F</strong></div>
+  <div style="text-align:right"><small>Part livreur</small><strong id="barLiv">0 F</strong></div>
+</div></div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+const WA = "2250100603038";
+const KEY = "tamaris-rapport-v2";
+const DEFAULT_ZONES = [
+  {name:"Plateau", price:1000},
+  {name:"Cocody", price:1500},{name:"Yopougon", price:1500},{name:"Adjamé", price:1500},
+  {name:"Abobo", price:1500},{name:"Marcory", price:1500},{name:"Koumassi", price:1500},
+  {name:"Port-Bouët", price:1500},{name:"Attécoubé", price:1500},
+  {name:"Bingerville", price:2000},{name:"Anyama", price:2500},{name:"Grand-Bassam", price:2500}
+];
+const EX_COUNTS = {"Plateau":8,"Cocody":3,"Yopougon":2,"Adjamé":1,"Bingerville":2,"Anyama":2,"Grand-Bassam":2};
+const today = () => { const d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); };
+const EXAMPLE = {
+  example:true, nom:"Koffi", date:today(), recus:26, carbu:5000, pct:60, rem:"",
+  zones:DEFAULT_ZONES.map(z=>({...z, n:EX_COUNTS[z.name]||0})),
+  extras:[{m:500,why:"parking"},{m:1000,why:"crédit d'appel"}]
+};
+let s;
+try { s = JSON.parse(localStorage.getItem(KEY)); } catch(e) {}
+if(!s || !Array.isArray(s.zones)) s = JSON.parse(JSON.stringify(EXAMPLE));
+
+const $ = id => document.getElementById(id);
+const num = v => { const n = parseInt(String(v).replace(/\s/g,""),10); return isFinite(n) && n>0 ? n : 0; };
+const F = n => n.toLocaleString("fr-FR").replace(/ | /g," ") + " F";
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e) {} };
+let editing = false;
+
+function bindField(id, key, isNum){
+  const el=$(id); el.value = s[key] ?? "";
+  el.addEventListener("input", ()=>{ s[key] = isNum ? el.value : el.value; s.example=false; update(); });
+}
+
+function renderZones(){
+  const box=$("zones"); box.innerHTML="";
+  s.zones.forEach((z,i)=>{
+    const row=document.createElement("div"); row.className="zone";
+    row.innerHTML=`<div class="zname"><b></b><small></small></div>
+      <div class="step"><button type="button" aria-label="Moins">−</button>
+      <input type="number" inputmode="numeric" min="0" id="zn${i}" aria-label="Nombre de livraisons">
+      <button type="button" aria-label="Plus">+</button></div>`;
+    row.querySelector("b").textContent=z.name;
+    const inp=row.querySelector("input"); inp.value=z.n||0;
+    const [minus,plus]=row.querySelectorAll("button");
+    const setN=v=>{ z.n=Math.max(0,v); inp.value=z.n; s.example=false; update(); };
+    minus.onclick=()=>setN(num(inp.value)-1);
+    plus.onclick=()=>setN(num(inp.value)+1);
+    inp.oninput=()=>{ z.n=num(inp.value); s.example=false; update(); };
+    box.appendChild(row);
+  });
+}
+function renderZonesEdit(){
+  const box=$("zonesEdit"); box.innerHTML="";
+  box.style.cssText="display:flex;flex-direction:column;gap:8px";
+  s.zones.forEach((z,i)=>{
+    const row=document.createElement("div"); row.className="edit-row";
+    row.innerHTML=`<input type="text" id="ze${i}" aria-label="Nom de la zone"><input type="number" inputmode="numeric" id="zp${i}" aria-label="Tarif en F"><button type="button" class="icon-btn" aria-label="Supprimer la zone">×</button>`;
+    const [n,p]=row.querySelectorAll("input");
+    n.value=z.name; p.value=z.price;
+    n.oninput=()=>{ z.name=n.value; update(); };
+    p.oninput=()=>{ z.price=num(p.value); update(); };
+    row.querySelector("button").onclick=()=>{ s.zones.splice(i,1); renderZonesEdit(); update(); };
+    box.appendChild(row);
+  });
+  const add=document.createElement("button"); add.type="button"; add.className="add"; add.textContent="+ Ajouter une zone";
+  add.onclick=()=>{ s.zones.push({name:"Nouvelle zone",price:1500,n:0}); renderZonesEdit(); update(); };
+  box.appendChild(add);
+}
+$("editZonesBtn").onclick=()=>{
+  editing=!editing;
+  $("editZonesBtn").textContent = editing ? "Terminer" : "Modifier les tarifs";
+  $("zones").hidden=editing; $("zonesEdit").hidden=!editing;
+  if(editing) renderZonesEdit(); else renderZones();
+};
+
+function renderExtras(){
+  const box=$("extras"); box.innerHTML="";
+  s.extras.forEach((x,i)=>{
+    const row=document.createElement("div"); row.className="exp-row";
+    row.innerHTML=`<input type="number" inputmode="numeric" placeholder="Montant" id="xm${i}" aria-label="Montant en F"><input type="text" placeholder="Motif (parking, crédit…)" id="xw${i}" aria-label="Motif"><button type="button" class="icon-btn" aria-label="Supprimer">×</button>`;
+    const [m,w]=row.querySelectorAll("input");
+    m.value=x.m||""; w.value=x.why||"";
+    m.oninput=()=>{ x.m=num(m.value); s.example=false; update(); };
+    w.oninput=()=>{ x.why=w.value; s.example=false; update(); };
+    row.querySelector("button").onclick=()=>{ s.extras.splice(i,1); renderExtras(); update(); };
+    box.appendChild(row);
+  });
+}
+$("addExtra").onclick=()=>{ s.extras.push({m:0,why:""}); renderExtras(); update(); const l=$("extras").lastElementChild; l && l.querySelector("input").focus(); };
+
+function fmtDate(v){ if(!v) return "../../...."; const [y,m,d]=v.split("-"); return `${d}/${m}/${y}`; }
+
+function update(){
+  const recus=num(s.recus);
+  const livres=s.zones.reduce((a,z)=>a+num(z.n),0);
+  const nonLiv=Math.max(0,recus-livres);
+  const taux=recus? Math.round(livres/recus*100):0;
+  const totalLiv=s.zones.reduce((a,z)=>a+num(z.n)*num(z.price),0);
+  const extras=s.extras.filter(x=>num(x.m)>0);
+  const totalDep=num(s.carbu)+extras.reduce((a,x)=>a+num(x.m),0);
+  const benef=totalLiv-totalDep;
+  let pct=parseInt(s.pct,10); if(!isFinite(pct)) pct=60; pct=Math.min(100,Math.max(0,pct));
+  const partLiv=Math.round(Math.max(0,benef)*pct/100);
+  const partTam=benef-partLiv;
+
+  $("stats").innerHTML="";
+  const chips=[[`Livrés : ${livres}`,"ok"],[`Non livrés : ${nonLiv}`, nonLiv?"warn":""],[`Réussite : ${taux} %`,""]];
+  if(livres>recus && recus) chips.push(["Plus de livrés que de reçus : vérifiez","warn"]);
+  chips.forEach(([t,c])=>{ const e=document.createElement("span"); e.className="chip "+c; e.textContent=t; $("stats").appendChild(e); });
+
+  $("totalLiv").textContent=F(totalLiv);
+  $("totalDep").textContent=F(totalDep);
+  $("benef").textContent=F(benef); $("barBenef").textContent=F(benef);
+  $("partLiv").textContent=F(partLiv); $("barLiv").textContent=F(partLiv);
+  $("partTam").textContent=F(partTam);
+  $("lblLiv").textContent=`Part livreur (${pct} %)`;
+  $("lblTam").textContent=`Part Tamaris (${100-pct} %)`;
+  $("exampleBanner").hidden=!s.example;
+
+  const L=[];
+  L.push("━━━━━━━━━━━━━━━━━━","🛵 TAMARIS LIVRAISON","📋 RAPPORT JOURNALIER","━━━━━━━━━━━━━━━━━━");
+  L.push(`👤 Livreur : ${s.nom||"………"}`,`📅 Date : ${fmtDate(s.date)}`,"");
+  L.push("📦 LIVRAISONS",`• Colis reçus : ${recus}`,`• Livrés : ${livres} ✅`,`• Non livrés : ${nonLiv} ❌`,"");
+  L.push("📍 DÉTAIL PAR ZONE");
+  s.zones.filter(z=>num(z.n)>0).forEach(z=>{ const n=num(z.n), p=num(z.price); L.push(`• ${z.name} (${F(p)}) : ${n} × ${p.toLocaleString("fr-FR").replace(/ | /g," ")} = ${F(n*p)}`); });
+  L.push(`➡️ Total livraisons : ${F(totalLiv)}`,"");
+  L.push("💸 DÉPENSES",`• Carburant : ${F(num(s.carbu))}`);
+  extras.forEach(x=>L.push(`• Extra : ${F(num(x.m))} (motif : ${x.why||"………"})`));
+  L.push(`➡️ Total dépenses : ${F(totalDep)}`,"📎 Reçu carburant : photo jointe ✅","");
+  L.push("🤝 RÉPARTITION",`• Bénéfice net : ${F(benef)}`,`• Part livreur (${pct} %) : ${F(partLiv)}`,`• Part Tamaris (${100-pct} %) : ${F(partTam)}`,"");
+  L.push(`📝 Remarques : ${(s.rem||"").trim()||"RAS"}`,"━━━━━━━━━━━━━━━━━━","✅ Rapport certifié exact","","⚠️ *REÇU DE CARBURANT OBLIGATOIRE*","*SANS PHOTO DU REÇU = CARBURANT NON REMBOURSÉ*");
+  const text=L.join("\n");
+  $("msg").textContent=text;
+  $("waBtn").href=`https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
+  save();
+}
+
+bindField("nom","nom"); bindField("date","date"); bindField("recus","recus",true);
+bindField("carbu","carbu",true); bindField("rem","rem"); bindField("pct","pct",true);
+if(!s.date){ s.date=today(); $("date").value=s.date; }
+if(s.pct==null||s.pct===""){ s.pct=60; $("pct").value=60; }
+
+$("resetBtn").onclick=()=>{
+  const nom=s.example?"":s.nom;
+  s={example:false,nom,date:today(),recus:"",carbu:"",pct:s.pct||60,rem:"",
+     zones:s.zones.map(z=>({name:z.name,price:z.price,n:0})),extras:[]};
+  ["nom","date","recus","carbu","rem","pct"].forEach(k=>$(k).value=s[k]??"");
+  renderZones(); renderExtras(); update();
+};
+
+let tt;
+function toast(t){ const e=$("toast"); e.textContent=t; e.hidden=false; clearTimeout(tt); tt=setTimeout(()=>e.hidden=true,2200); }
+$("copyBtn").onclick=()=>{
+  const text=$("msg").textContent;
+  const fallback=()=>{ const r=document.createRange(); r.selectNodeContents($("msg")); const sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Texte sélectionné : copiez-le"); };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast("Message copié"),fallback);
+  } else fallback();
+};
+
+renderZones(); renderExtras(); update();
+})();
+</script>
+</body>
+</html>
